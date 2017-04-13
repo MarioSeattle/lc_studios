@@ -1,0 +1,20 @@
+import image
+
+img = image.Image("luther.jpg")
+#new image
+new_img = image.EmptyImage(img.getWidth(), img.getHeight())
+win = image.ImageWin(img.getWidth(), img.getHeight())
+
+for i in range(0, img.getWidth()):
+    for j in range(0, img.getHeight()):
+        old_p = img_getPixel(i, j)
+        red = old_p.getRed()
+        blue = old_p.getBlue()
+        new_p = image.Pixel(red, 0, 0)
+        new_img.setPixel(i, j, new_p)
+        
+
+new_img.draw(win)  
+
+
+      
